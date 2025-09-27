@@ -13,8 +13,10 @@ body{
     background-color: rgba(161, 47, 27, 0.479);
     overflow: hidden;
 }
+
 .winner h1{
     text-transform: uppercase;
+    opacity: 0;
 }
 
 h1{
@@ -51,6 +53,13 @@ h1{
 }
 
 .Reset{
+padding: 10px 20px;
+border: none;
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.182);
+}
+
+.Resets1{
 padding: 10px 20px;
 border: none;
 border-radius: 10px;

@@ -39,8 +39,12 @@ function winner(){
 
     if(pos1val!="" && pos1val2!="" && pos1val3!=""){
         if(pos1val===pos1val2 && pos1val===pos1val3){
+             document.querySelector(".winner h1").style.opacity=1;
             document.querySelector(".winner h1").textContent=`winner is ${pos1val}`;
-            
+            buttons.forEach(function(val){
+                val.disabled=true;
+            })
+           reset_button.style.display="none";
         }
     }
 }
@@ -48,12 +52,13 @@ function winner(){
    
 
     function resets(){
-        reset_button.addEventListener('click',function(){
             buttons.forEach(function(val){
                 val.innerHTML="";
                 val.disabled=false;
+                 document.querySelector(".winner h1").style.opacity=0;
             })
-        })
     }
 
     resets();
+    reset_button.addEventListener("click",resets)
+    document.querySelector(".Resets1").addEventListener("click",resets);
